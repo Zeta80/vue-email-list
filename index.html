@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- VUE SCRIPT -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.global.min.js"></script>
     <!-- AXIOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <!-- MY SCRIPT -->
@@ -19,9 +20,9 @@
 <body>
     <div id="app">
         <h1>QUESTE SONO LE MAIL</h1>
-        <button>MOSTRA MAIL</button>
+        <button @click="buttonGenerate">MOSTRA MAIL</button>
         <ul>
-            <li></li>
+            <li v-if="itemsEmail.length === cont" v-for="(email, index) in itemsEmail">{{ email }}</li>
         </ul>
     </div>
 </body>
